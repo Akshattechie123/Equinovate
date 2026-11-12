@@ -1,9 +1,9 @@
 
 :root {
     --primary: #0865d5;
-    --dark: #091d49;
-    --text: #253651;
-    --muted: #697991;
+    --dark: #050f26;
+    --text: #0b1730;
+    --muted: #2f3d57;
     --light: #eff7ff;
 }
 
@@ -20,6 +20,8 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
     color: var(--text);
     overflow-x: hidden;
 }
@@ -38,7 +40,7 @@ body {
     gap: 9px;
     color: var(--dark);
     text-decoration: none;
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 800;
 }
 
@@ -49,14 +51,14 @@ body {
 
 .logo small {
     display: block;
-    font-size: 7px;
+    font-size: 10px;
     letter-spacing: 1px;
 }
 
 .nav-link {
-    font-size: 11px;
-    font-weight: 650;
-    color: #263753;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0b1730;
 }
 
 .nav-link:hover,
@@ -65,8 +67,8 @@ body {
 }
 
 .btn {
-    font-size: 12px;
-    font-weight: 650;
+    font-size: 15px;
+    font-weight: 700;
     border-radius: 6px;
     padding: 10px 16px;
 }
@@ -84,10 +86,10 @@ body {
 
 .section-label {
     display: block;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 800;
     letter-spacing: 1px;
-    color: #566983;
+    color: #1c2a45;
     margin-bottom: 8px;
 }
 
@@ -120,10 +122,10 @@ body {
 }
 
 .hero-section p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.7;
     max-width: 480px;
-    color: #40516c;
+    color: #14223c;
 }
 
 .hero-buttons {
@@ -162,12 +164,12 @@ body {
 
 .feature-item b {
     display: block;
-    font-size: 9px;
+    font-size: 12px;
 }
 
 .feature-item small {
     display: block;
-    font-size: 8px;
+    font-size: 11px;
     color: var(--muted);
     margin-top: 3px;
 }
@@ -175,7 +177,7 @@ body {
 /* PRODUCTS */
 
 .products-section h2 {
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 800;
     color: var(--dark);
 }
@@ -212,13 +214,13 @@ body {
 .green { background: #e8f8ef; color: #20a45c; }
 
 .product-card h5 {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 800;
 }
 
 .product-card p {
     color: var(--muted);
-    font-size: 9px;
+    font-size: 12px;
     min-height: 38px;
     line-height: 1.5;
 }
@@ -234,7 +236,7 @@ body {
 .product-card a {
     color: var(--primary);
     text-decoration: none;
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -246,13 +248,13 @@ body {
 }
 
 .custom-section h2 {
-    font-size: 31px;
+    font-size: 34px;
     font-weight: 800;
     color: var(--dark);
 }
 
 .custom-section p {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--muted);
     line-height: 1.7;
     max-width: 470px;
@@ -266,7 +268,7 @@ body {
 }
 
 .platform-icons div {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -298,13 +300,13 @@ body {
 }
 
 .why-card h5 {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 800;
     margin-bottom: 5px;
 }
 
 .why-card p {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--muted);
     margin: 0;
 }
@@ -328,7 +330,7 @@ body {
 
 .industry-card b {
     display: block;
-    font-size: 9px;
+    font-size: 12px;
     margin-top: 7px;
 }
 
@@ -348,14 +350,14 @@ body {
 }
 
 .sap-section h2 {
-    font-size: 19px;
+    font-size: 21px;
     font-weight: 800;
     color: var(--dark);
     margin-bottom: 4px;
 }
 
 .sap-section p {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--muted);
     margin: 0;
 }
@@ -378,25 +380,25 @@ body {
 }
 
 .case-card small {
-    font-size: 8px;
+    font-size: 11px;
     color: var(--muted);
 }
 
 .case-card h5 {
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 800;
     margin-top: 5px;
 }
 
 .case-card p {
-    font-size: 9px;
+    font-size: 12px;
     color: var(--muted);
 }
 
 .case-card a {
     text-decoration: none;
     color: var(--primary);
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -409,13 +411,13 @@ body {
 }
 
 .contact-section h2 {
-    font-size: 33px;
+    font-size: 36px;
     font-weight: 800;
 }
 
 .contact-section p {
-    color: #c1d1e6;
-    font-size: 12px;
+    color: #e6eefb;
+    font-size: 15px;
 }
 
 .contact-section .section-label {
@@ -430,7 +432,7 @@ body {
 }
 
 .contact-benefits span {
-    font-size: 10px;
+    font-size: 13px;
     color: #e2edfc;
 }
 
@@ -448,19 +450,19 @@ body {
 }
 
 .contact-form label {
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
 .contact-form .form-control,
 .contact-form .form-select {
-    font-size: 10px;
+    font-size: 13px;
     padding: 9px;
 }
 
 .form-message {
-    font-size: 9px;
+    font-size: 12px;
     text-align: center;
     margin: 7px 0 0;
     color: #64748b;
@@ -475,13 +477,13 @@ body {
 }
 
 .footer p {
-    font-size: 9px;
+    font-size: 12px;
     margin: 0;
 }
 
 .footer a:last-child {
     color: white;
-    font-size: 10px;
+    font-size: 13px;
     text-decoration: none;
 }
 
@@ -538,11 +540,11 @@ body {
     }
 
     .hero-section h1 {
-        font-size: 34px;
+        font-size: 37px;
     }
 
     .hero-section p {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .hero-image img {
@@ -558,15 +560,15 @@ body {
     }
 
     .feature-item b {
-        font-size: 8px;
+        font-size: 11px;
     }
 
     .feature-item small {
-        font-size: 7px;
+        font-size: 10px;
     }
 
     .products-section h2 {
-        font-size: 19px;
+        font-size: 21px;
     }
 
     .product-card {
@@ -582,7 +584,7 @@ body {
     }
 
     .custom-section h2 {
-        font-size: 25px;
+        font-size: 28px;
     }
 
     .why-card {
@@ -604,7 +606,7 @@ body {
     }
 
     .contact-section h2 {
-        font-size: 27px;
+        font-size: 30px;
     }
 
     .contact-form {
@@ -619,4 +621,116 @@ body {
     .footer p {
         width: 100%;
     }
+}
+
+
+/* ===== LOGO ===== */
+.logo-img {
+    height: 58px;
+    width: auto;
+    display: block;
+}
+
+.footer-logo {
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 8px;
+}
+
+.footer-logo .logo-img {
+    height: 44px;
+}
+
+/* ===== DARKER TEXT ===== */
+h1, h2, h3, h4, h5, h6 { color: var(--dark); }
+.contact-section h2 { color: #fff; }
+.product-card h5, .why-card h5, .case-card h5, .feature-item b { color: var(--dark); font-weight: 800; }
+.product-card p, .why-card p, .case-card p, .case-card small,
+.feature-item small, .sap-section p, .custom-section p { color: var(--muted); font-weight: 500; }
+.contact-form label { color: var(--dark); }
+.industry-card b { color: var(--dark); font-weight: 700; }
+
+/* ===== HERO IMAGE (dashboard1, right side) ===== */
+.hero-image img {
+    height: auto;
+    max-height: 480px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 16px;
+}
+
+/* ===== PRODUCT: icon + name side by side ===== */
+.product-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.product-head .product-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.product-head h5 {
+    margin: 0;
+    line-height: 1.25;
+}
+
+.product-card p {
+    min-height: 0;
+    margin-bottom: 10px;
+}
+
+/* ===== CUSTOM SECTION: text | dashboard2 | icons ===== */
+.custom-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(17, 51, 91, .18);
+}
+
+.platform-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+}
+
+.platform-icons div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #d5e5f7;
+    border-radius: 10px;
+    padding: 11px 16px;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.platform-icons i {
+    margin: 0;
+    width: 26px;
+    text-align: center;
+}
+
+.custom-section p { max-width: 430px; }
+
+@media (max-width: 991px) {
+    .platform-icons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .platform-icons div { flex: 1 1 140px; }
+    .hero-image img { height: auto; max-height: none; }
+}
+
+@media (max-width: 575px) {
+    .logo-img { height: 44px; }
+    .hero-image img { height: auto; }
 }
