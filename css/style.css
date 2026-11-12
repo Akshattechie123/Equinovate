@@ -56,7 +56,7 @@ body {
 }
 
 .nav-link {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     color: #0b1730;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 .btn {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 700;
     border-radius: 6px;
     padding: 10px 16px;
@@ -86,11 +86,11 @@ body {
 
 .section-label {
     display: block;
-    font-size: 13px;
+    font-size: 14.5px;
     font-weight: 800;
     letter-spacing: 1px;
     color: #1c2a45;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .section-heading {
@@ -122,9 +122,9 @@ body {
 }
 
 .hero-section p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.7;
-    max-width: 480px;
+    max-width: 520px;
     color: #14223c;
 }
 
@@ -158,18 +158,18 @@ body {
 }
 
 .feature-item i {
-    font-size: 21px;
+    font-size: 24px;
     color: var(--primary);
 }
 
 .feature-item b {
     display: block;
-    font-size: 12px;
+    font-size: 14.5px;
 }
 
 .feature-item small {
     display: block;
-    font-size: 11px;
+    font-size: 13.5px;
     color: var(--muted);
     margin-top: 3px;
 }
@@ -177,7 +177,7 @@ body {
 /* PRODUCTS */
 
 .products-section h2 {
-    font-size: 27px;
+    font-size: 32px;
     font-weight: 800;
     color: var(--dark);
 }
@@ -198,13 +198,13 @@ body {
 }
 
 .product-icon {
-    height: 38px;
-    width: 38px;
+    height: 44px;
+    width: 44px;
     display: grid;
     place-items: center;
     border-radius: 8px;
     margin-bottom: 9px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .blue { background: #e8f3ff; color: #0865d5; }
@@ -214,20 +214,20 @@ body {
 .green { background: #e8f8ef; color: #20a45c; }
 
 .product-card h5 {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 800;
 }
 
 .product-card p {
     color: var(--muted);
-    font-size: 12px;
+    font-size: 15px;
     min-height: 38px;
     line-height: 1.5;
 }
 
 .product-card img {
     width: 100%;
-    height: 95px;
+    height: 150px;
     object-fit: cover;
     border-radius: 6px;
     margin-bottom: 10px;
@@ -236,7 +236,7 @@ body {
 .product-card a {
     color: var(--primary);
     text-decoration: none;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
 }
 
@@ -248,13 +248,13 @@ body {
 }
 
 .custom-section h2 {
-    font-size: 34px;
+    font-size: 38px;
     font-weight: 800;
     color: var(--dark);
 }
 
 .custom-section p {
-    font-size: 15px;
+    font-size: 17.5px;
     color: var(--muted);
     line-height: 1.7;
     max-width: 470px;
@@ -284,8 +284,8 @@ body {
     height: 100%;
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 15px;
+    gap: 14px;
+    padding: 16px;
     background: #fff;
     border: 1px solid #e8edf5;
     border-radius: 9px;
@@ -294,19 +294,24 @@ body {
 .why-card > i {
     color: var(--primary);
     background: #edf6ff;
-    padding: 12px;
-    font-size: 19px;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    font-size: 22px;
     border-radius: 8px;
 }
 
 .why-card h5 {
-    font-size: 13px;
+    font-size: 16.5px;
     font-weight: 800;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .why-card p {
-    font-size: 12px;
+    font-size: 15px;
+    line-height: 1.45;
     color: var(--muted);
     margin: 0;
 }
@@ -317,21 +322,56 @@ body {
     background: #f6faff;
 }
 
+.industry-track {
+    display: flex;
+    gap: 18px;
+    margin-top: 8px;
+    padding-bottom: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    scrollbar-width: thin;
+    scrollbar-color: #b9cde6 transparent;
+}
+
+.industry-track.is-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+    user-select: none;
+}
+
+.industry-slide {
+    flex: 0 0 clamp(230px, 24vw, 285px);
+    scroll-snap-align: start;
+}
+
 .industry-card {
     text-align: center;
 }
 
 .industry-card img {
     width: 100%;
-    height: 90px;
+    height: 190px;
     object-fit: cover;
-    border-radius: 7px;
+    border-radius: 10px;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    transition: transform .4s ease;
+}
+
+.industry-slide:hover .industry-card img {
+    transform: scale(1.02);
 }
 
 .industry-card b {
     display: block;
-    font-size: 12px;
-    margin-top: 7px;
+    font-size: 17px;
+    line-height: 1.3;
+    margin-top: 10px;
 }
 
 /* SAP */
@@ -350,14 +390,14 @@ body {
 }
 
 .sap-section h2 {
-    font-size: 21px;
+    font-size: 26px;
     font-weight: 800;
     color: var(--dark);
     margin-bottom: 4px;
 }
 
 .sap-section p {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--muted);
     margin: 0;
 }
@@ -380,25 +420,25 @@ body {
 }
 
 .case-card small {
-    font-size: 11px;
+    font-size: 13.5px;
     color: var(--muted);
 }
 
 .case-card h5 {
-    font-size: 14px;
+    font-size: 17px;
     font-weight: 800;
     margin-top: 5px;
 }
 
 .case-card p {
-    font-size: 12px;
+    font-size: 15px;
     color: var(--muted);
 }
 
 .case-card a {
     text-decoration: none;
     color: var(--primary);
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
 }
 
@@ -411,13 +451,13 @@ body {
 }
 
 .contact-section h2 {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 800;
 }
 
 .contact-section p {
     color: #e6eefb;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 .contact-section .section-label {
@@ -432,14 +472,14 @@ body {
 }
 
 .contact-benefits span {
-    font-size: 13px;
+    font-size: 15.5px;
     color: #e2edfc;
 }
 
 .contact-benefits i {
     color: #91c3ff;
     margin-right: 5px;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 .contact-form {
@@ -450,19 +490,39 @@ body {
 }
 
 .contact-form label {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
 .contact-form .form-control,
 .contact-form .form-select {
-    font-size: 13px;
-    padding: 9px;
+    font-size: 15px;
+    padding: 10px 11px;
+    background-color: #eef3fa;
+    border: 1.5px solid #9db2cf;
+    transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.contact-form .form-control::placeholder {
+    color: #5d6e88;
+    font-weight: 500;
+}
+
+.contact-form .form-control:hover,
+.contact-form .form-select:hover {
+    border-color: #6f8bb3;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+    background-color: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(8, 101, 213, .18);
 }
 
 .form-message {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     margin: 7px 0 0;
     color: #64748b;
@@ -477,13 +537,13 @@ body {
 }
 
 .footer p {
-    font-size: 12px;
+    font-size: 14px;
     margin: 0;
 }
 
 .footer a:last-child {
     color: white;
-    font-size: 13px;
+    font-size: 15px;
     text-decoration: none;
 }
 
@@ -544,7 +604,7 @@ body {
     }
 
     .hero-section p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .hero-image img {
@@ -556,19 +616,19 @@ body {
     }
 
     .feature-item i {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .feature-item b {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .feature-item small {
-        font-size: 10px;
+        font-size: 12.5px;
     }
 
     .products-section h2 {
-        font-size: 21px;
+        font-size: 26px;
     }
 
     .product-card {
@@ -576,7 +636,15 @@ body {
     }
 
     .product-card img {
-        height: 70px;
+        height: 100px;
+    }
+
+    .product-card h5 {
+        font-size: 16px;
+    }
+
+    .product-card p {
+        font-size: 14px;
     }
 
     .product-card p {
@@ -584,21 +652,38 @@ body {
     }
 
     .custom-section h2 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .why-card {
-        padding: 9px;
-        gap: 7px;
+        padding: 10px;
+        gap: 8px;
     }
 
     .why-card > i {
+        font-size: 17px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .why-card h5 {
         font-size: 15px;
-        padding: 9px;
+    }
+
+    .why-card p {
+        font-size: 13.5px;
+    }
+
+    .industry-slide {
+        flex-basis: 72vw;
     }
 
     .industry-card img {
-        height: 75px;
+        height: 170px;
+    }
+
+    .sap-section h2 {
+        font-size: 22px;
     }
 
     .case-card img {
@@ -606,7 +691,7 @@ body {
     }
 
     .contact-section h2 {
-        font-size: 30px;
+        font-size: 34px;
     }
 
     .contact-form {
@@ -678,7 +763,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--dark); }
 }
 
 .product-card p {
-    min-height: 0;
+    min-height: 3em; /* reserve two lines so images/links align across a row */
     margin-bottom: 10px;
 }
 
@@ -707,18 +792,19 @@ h1, h2, h3, h4, h5, h6 { color: var(--dark); }
     border: 1px solid #d5e5f7;
     border-radius: 10px;
     padding: 11px 16px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 800;
     color: var(--dark);
 }
 
 .platform-icons i {
     margin: 0;
-    width: 26px;
+    font-size: 22px;
+    width: 28px;
     text-align: center;
 }
 
-.custom-section p { max-width: 430px; }
+.custom-section p { max-width: 480px; }
 
 @media (max-width: 991px) {
     .platform-icons {
@@ -733,4 +819,64 @@ h1, h2, h3, h4, h5, h6 { color: var(--dark); }
 @media (max-width: 575px) {
     .logo-img { height: 44px; }
     .hero-image img { height: auto; }
+}
+
+/* ===== SUBTLE ANIMATIONS ===== */
+/* Scroll reveal (class added by js/script.js, so content stays visible without JS) */
+.reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .6s ease, transform .6s ease;
+    transition-delay: var(--reveal-delay, 0s);
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+.why-card {
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-3px);
+    border-color: #cfe0f5;
+    box-shadow: 0 8px 20px rgba(8, 101, 213, .08);
+}
+
+.case-card {
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(8, 101, 213, .08);
+}
+
+.btn {
+    transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .industry-track {
+        scroll-behavior: auto;
+    }
+
+    .why-card,
+    .case-card,
+    .btn,
+    .industry-card img {
+        transition: none;
+    }
 }
