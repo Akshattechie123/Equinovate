@@ -218,3 +218,5 @@ a{text-decoration:none}
 .cta-page{margin-top:0;min-height:calc(100vh - var(--nav-h) - 82px);display:flex;align-items:center;padding:60px 0}
 .cta-page>.container{width:100%}
 @media(max-width:991px){.cta-page{padding:40px 0}}
+
+.phone-top .pt-logo{height:10px;width:auto;display:block}
