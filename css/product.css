@@ -20,7 +20,7 @@ a{text-decoration:none}
 
 /* ---------- NAVBAR ---------- */
 .pnav{background:#fff;min-height:var(--nav-h);padding:8px 0;box-shadow:0 2px 14px rgba(10,31,77,.07);z-index:1030}
-.pnav .logo-img{height:56px;width:auto;display:block}
+.pnav .logo-img{height:44px;width:auto;display:block}
 .pnav .nav-link{font-size:14px;font-weight:700;color:var(--ink);padding:8px 14px!important;position:relative}
 .pnav .nav-link:hover{color:var(--blue)}
 .pnav .nav-link.active{color:var(--navy)}
@@ -176,7 +176,7 @@ a{text-decoration:none}
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:991px){
     :root{--nav-h:68px}
-    .pnav .logo-img{height:46px}
+    .pnav .logo-img{height:38px}
     .pnav .navbar-collapse{background:#fff;padding:12px 0 6px}
     .pnav .nav-link.active::after{display:none}
     .pnav .nav-link.active{color:var(--blue)}
