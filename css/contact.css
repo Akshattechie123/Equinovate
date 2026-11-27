@@ -8,7 +8,7 @@
     color: #fff;
     background:
         linear-gradient(100deg, rgba(4, 18, 46, .95) 0%, rgba(7, 37, 85, .88) 55%, rgba(11, 58, 128, .55) 100%),
-        url("../images/contact-hero-bg.jpg") center 60% / cover no-repeat;
+        url("../images/contact.jpeg") center 60% / cover no-repeat;
     background-color: #072555;
 }
 
