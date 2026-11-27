@@ -18,25 +18,17 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Subtle scroll reveal (content stays visible if JS or IntersectionObserver is unavailable)
-    const targets = document.querySelectorAll(".c-rv");
-
-    if ("IntersectionObserver" in window &&
-        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-
-        const observer = new IntersectionObserver(function (entries, obs) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("in-view");
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        targets.forEach(function (el, i) {
-            el.style.setProperty("--reveal-delay", (i % 3) * 0.1 + "s");
-            el.classList.add("reveal");
-            observer.observe(el);
+    // AOS scroll animations (if the library fails to load, show content normally)
+    if (typeof AOS !== "undefined") {
+        AOS.init({
+            duration: 800,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 70
+        });
+    } else {
+        document.querySelectorAll("[data-aos]").forEach(function (el) {
+            el.removeAttribute("data-aos");
         });
     }
 

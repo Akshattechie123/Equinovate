@@ -4,11 +4,12 @@
 .c-hero {
     position: relative;
     overflow: hidden;
-    padding: 46px 0 120px;
+    padding: 60px 0 130px;
     color: #fff;
     background:
-        radial-gradient(circle at 85% 20%, rgba(43, 140, 255, .35), transparent 45%),
-        linear-gradient(120deg, #04122e 0%, #072555 55%, #0b3a80 100%);
+        linear-gradient(100deg, rgba(4, 18, 46, .95) 0%, rgba(7, 37, 85, .88) 55%, rgba(11, 58, 128, .55) 100%),
+        url("../images/contact-hero-bg.jpg") center 60% / cover no-repeat;
+    background-color: #072555;
 }
 
 .c-hero::before {
@@ -21,16 +22,6 @@
     mask-image: linear-gradient(180deg, #000 30%, transparent 100%);
     pointer-events: none;
 }
-
-.c-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(70px);
-    pointer-events: none;
-}
-
-.c-glow-1 { width: 320px; height: 320px; background: rgba(8, 113, 232, .45); top: -120px; left: -90px; }
-.c-glow-2 { width: 280px; height: 280px; background: rgba(37, 211, 102, .16); bottom: -120px; right: 25%; }
 
 .c-breadcrumb {
     display: flex;
@@ -57,10 +48,8 @@
 .c-breadcrumb a:hover { text-decoration: underline; }
 
 .c-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 7px 14px;
+    display: inline-block;
+    padding: 7px 16px;
     border-radius: 50px;
     font-size: 13.5px;
     font-weight: 700;
@@ -130,62 +119,7 @@
     font-weight: 600;
 }
 
-.c-chips i { color: #8cc4ff; margin-right: 6px; }
-
-/* orbit illustration */
-.c-orbit {
-    position: relative;
-    width: 380px;
-    height: 380px;
-    margin: 0 auto;
-}
-
-.c-ring {
-    position: absolute;
-    border-radius: 50%;
-    border: 1.5px dashed rgba(255, 255, 255, .28);
-}
-
-.c-ring-1 { inset: 40px; }
-.c-ring-2 { inset: -8px; border-style: solid; border-color: rgba(255, 255, 255, .10); }
-
-.c-core {
-    position: absolute;
-    inset: 120px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 60px;
-    color: #fff;
-    background: linear-gradient(140deg, #1a86ff, #0553b8);
-    box-shadow: 0 0 0 14px rgba(43, 140, 255, .18), 0 20px 50px rgba(0, 0, 0, .35);
-}
-
-.c-float {
-    position: absolute;
-    width: 62px;
-    height: 62px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    color: #0b3673;
-    background: #fff;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, .28);
-    animation: cFloat 5s ease-in-out infinite;
-}
-
-.c-float-1 { top: 6px;   left: 60px;  color: #1fb857; }
-.c-float-2 { top: 40px;  right: 20px; color: #0865d5; animation-delay: -1.2s; }
-.c-float-3 { bottom: 20px; left: 36px; color: #e0463c; animation-delay: -2.4s; }
-.c-float-4 { bottom: 54px; right: 4px; color: #6b4de0; animation-delay: -3.4s; }
-
-@keyframes cFloat {
-    0%, 100% { transform: translateY(0); }
-    50%      { transform: translateY(-12px); }
-}
+.c-chips i { color: #4be08a; margin-right: 7px; }
 
 /* ---------- Info cards ---------- */
 .c-info {
@@ -624,6 +558,15 @@
     .c-main { padding-top: 48px; }
 }
 
+@media (max-width: 767px) {
+    .c-hero {
+        background:
+            linear-gradient(180deg, rgba(4, 18, 46, .90), rgba(7, 37, 85, .84)),
+            url("../images/contact-hero-bg.jpg") center / cover no-repeat;
+        background-color: #072555;
+    }
+}
+
 @media (max-width: 575px) {
     .c-hero { padding: 28px 0 100px; }
     .c-hero p { font-size: 16px; }
@@ -655,6 +598,5 @@
     .c-cta-actions, .c-cta-actions .btn { width: 100%; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .c-float { animation: none; }
-}
+/* keep AOS slide-in animations from causing sideways scroll */
+.c-main, .c-faq, .c-map-section, .c-cta { overflow-x: clip; }
